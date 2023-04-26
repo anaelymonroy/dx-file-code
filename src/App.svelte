@@ -360,7 +360,7 @@
                             dragDropText.innerHTML = 'Arrastra y suelta tu archivo aquí';
                             uploadButton.innerHTML = 'Subir';
                         });
-                        `+ ` var param_form = '&NAME_FRM=`+nombre_formulario+`&URL=`+url_formulario
+                        `+ ` var param_form = '&FRMNAME=`+nombre_formulario+`&URL=`+url_formulario
                         + `';`
 
 
