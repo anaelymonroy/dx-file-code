@@ -23,20 +23,8 @@
                     <link href='https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined' rel='stylesheet'>
                     <style>
                     @import url('https://fonts.googleapis.com/css2?family=Playfair Display&display=swap');
-                    body {
-                        margin: 0;
-                        padding: 0;
-                        box-sizing: border-box;
-                        font-family: var(--font-site), Open Sans;
-                    }
-                    .form-container {
-                        width: 100vw;
-                        height: 100vh;
-                        background-color: var(--color-site);
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                    }
+
+
                     .upload-files-container {
                         background-color: #f7fff7;
                         width: 420px;
