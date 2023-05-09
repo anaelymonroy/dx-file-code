@@ -17,9 +17,7 @@
 
 
     function code_return() {
-        return `<!DOCTYPE html>
-                <html lang='en'>
-                <head>
+        return `
                     <link href='https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined' rel='stylesheet'>
                     <style>
                     @import url('https://fonts.googleapis.com/css2?family=Playfair Display&display=swap');
@@ -148,7 +146,7 @@
                     </style>
                     <meta charset='UTF-8'>
                     <title>Subir Archivo</title>
-                </head>
+
 
 
 
@@ -378,6 +376,11 @@
 
           nombre_formulario = undefined;
           url_formulario =undefined;
+          let alert = document.querySelector('.alert');
+          console.log(alert);
+          alert.style.cssText = 'display: block;';
+
+
         }else{
             alert("Favor llenar los campos solicitados");
         }
@@ -413,7 +416,10 @@
                 </svg>
             </div>
             <div class="mx-auto max-w-2xl py-25 sm:py-20 lg:py-25">
-
+                    <div class="alert">
+                      <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                      <strong>Exito!</strong> Codigo generado exitosamente.
+                    </div>
                 <div class="text-center">
                     <h1 class="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl">Generar Formulario</h1>
 
@@ -421,9 +427,9 @@
 
                     <form on:submit={handleFormSubmit}>
                         <dd class="text-base font-semibold leading-7"> Nombre del Formulario</dd>
-                        <input  class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" type="text" bind:value={nombre_formulario}/>
+                        <input  class="block w-full text-sm text-gray-200 border border-gray-700 rounded-lg cursor-pointer bg-gray-700 dark:text-gray-700 focus:outline-none dark:bg-gray-700 dark:border-gray-700 dark:placeholder-gray-400" type="text" bind:value={nombre_formulario}/>
                         <dd class="text-base font-semibold leading-7 "> URL</dd>
-                        <input  class="block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 dark:text-gray-400 focus:outline-none dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400" type="text" bind:value={url_formulario}/>
+                        <input  class="block w-full text-sm text-gray-200 border border-gray-700 rounded-lg cursor-pointer bg-gray-700 dark:text-gray-700 focus:outline-none dark:bg-gray-700 dark:border-gray-700 dark:placeholder-gray-400" type="text" bind:value={url_formulario}/>
                         <div class="mx-auto mt-5 max-w-2xl sm:mt-5 lg:mt-5 lg:max-w-4xl">
                             <button class="rounded-md bg-indigo-600 px-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-3 focus-visible:outline-offset-2 focus-visible:outline-indigo-600" type="submit">Generar Codigo</button>
                         </div>
